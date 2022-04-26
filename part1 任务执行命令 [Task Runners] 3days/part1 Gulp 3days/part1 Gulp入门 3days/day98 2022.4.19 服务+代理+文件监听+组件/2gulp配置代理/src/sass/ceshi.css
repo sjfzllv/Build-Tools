@@ -1,0 +1,14 @@
+@charset "UTF-8";
+div {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+div p {
+  width: 100px;
+  height: 100px;
+}
+
+/* 多行注释 */
+/*! 强力注释 */

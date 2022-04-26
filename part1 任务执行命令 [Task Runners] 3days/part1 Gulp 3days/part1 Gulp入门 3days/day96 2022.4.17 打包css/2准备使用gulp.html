@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            准备使用 gulp
+                + 作用: 帮我们打包自己的项目
+            
+            1. 准备一个项目
+                + 需求: 你要确定好自己的目录结构
+                        你要分开源码和打包以后的内容
+                + 确定自己的目录结构
+                    - xiaomi
+                        - src 源码
+                            + pages     html
+                            + css       css
+                            + js        js
+                            + sass      sass
+                            + images    图片
+                            + videos    视频
+                            + audios    音频
+                            + lib       第三方文件(jquery, swiper, ...)
+                            + fonts     字体图标文件
+            2. 准备一个 gulpfile.js 的文件
+                + 必须有
+                + gulp 进行打包的依据
+                + 每一个项目需要一个 gulpfile.js
+                + 我们在这个文件里面进行我们本项目的打包配置
+                + gulp 在运行的时候，会自动读取 gulpfile.js 文件里面的配置
+                + 按照你在 gulpfile.js文件里面的配置进行打包工作
+                + 注意: **直接写在项目根目录，和 src 同级**
+            3. 在项目里面再次安装 gulp
+                + 注意: **项目里面的 gulp 是以第三方模块的格式出现的**
+                + 专门给你提供配置打包流程 API 的
+                + 每一个项目都要安装一次
+                + 打开命令行，切换到项目目录
+                    => 输入指令 $ npm install gulp -D
+            4. 在 gulpfile.js 里面书写配置文件
+                + 书写你该项目的打包流程
+                + 书写完毕以后，按照打包流程去执行 gulp 指令运行 gulpfile.js 文件
+        */
+        /*
+             源码和打包以后的内容
+                + pages/index.html 开发源码
+                + 打包完毕放在哪 ?
+                + 同级目录下，再次新建一个叫做 pages 的文件夹
+                    => 不行 ? 不能创建同名文件夹
+                + 同级目录下，创建一个叫做 views 的文件
+                    => 不行 ?
+                + 必须要保证打包前后的目录结构一致
+                    => 创建一个叫做 src 的目录(表示源码)
+                    => 创建一个叫做 dist 的目录(存放打包后的文件)
+        */
+        /*
+            gulp
+                1. 全局依赖 gulp
+                    + 一台电脑安装一次，以后使用就可以了
+                    + 在命令行提供 gulp xxx 的能力
+                    + 指令 $ npm install --global gulp
+                2. 项目依赖第三方 gulp
+                    + 每一个项目都要安装一次
+                    + 作为第三包出现，在你导入以后吗，可以使用 gulp.xxx() 方法
+                    + 切换到项目目录，输入指令 $ npm install gulp
+         */
+        /*
+            package.json 记录的第三方依赖
+                + dependencies
+                    => 表示你的项目的 项目依赖
+                    => 比如 jquery，swiper
+                    => 指项目运行需要用到的内容，将来上线以后也需要用到的内容
+                + devDependencies
+                    => 表示的你项目的 开发依赖
+                    => 比如 gulp
+                    => 指项目开发阶段需要用到的内容，将来上线以后不需要用到的
+            
+            gulp 第三方包最好是放在 devDependencies
+                + 在你安装第三方依赖的时候，书写 $ npm install --dev 包名
+                + 就会把依赖项记录在 devDependencies
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            gulp 的常用 API
+                + 前提: 下载 gulp 第三方, 导入以后使用
+            
+            1. gulp.task()
+                => 语法: gulp.task(任务名称, 任务处理函数)
+                => 作用: 创建一个基于流的任务
+                => 例子: gulp.task('htmlHandler', function() {
+                    // 找到html 源文件, 进行压缩, 打包, 放入指定目录
+                })
+            
+            2. gulp.src()
+                => 语法: gulp.src(路径信息)
+                => 作用: 找到源文件
+                => 书写方式
+                    2-1. gulp.src('./a/b.html')
+                        -> 找到指定一个文件
+                    2-2. gulp.src('./a/*.html')
+                        -> 找到指定目录下, 指定后缀的文件
+                    2-3. gulp.src('./a/**')
+                        -> 找到指令目录下的所有文件
+                    2-4. gulp.src('./a/**\/*')
+                        -> 找到 a 目录下所有子目录里面的所有文件
+                    2-5. gulp.src('./a/**\/*.html')
+                        -> 找到 a 目录下所有子目录里面的所有 .html 文件
+                
+            3. gulp.dest()
+                => 语法: gulp.dest(路径信息)
+                => 作用: 把一个内容放入指定目录内
+                => 例子: gulp.dest('.abc')
+                    -> 把他接收到的内容放到 abc 目录下
+            
+            4. gulp.watch()
+                => 语法: gulp.watch(路径信息, 任务信息)
+                => 作用: 键控指定目录下的文件, 一旦发生变化, 重新执行后面的任务
+                => 例子: gulp.watch('./src/pages/*.html', htmlHandler)
+                    -> 当指定目录下的 html 文件发生变化, 就会执行 htmlHandler 这个任务
+
+            5. gulp.series()
+                => 语法: gulp.series(任务1, 任务2, 任务3, ...)
+                => 作用: 逐个执行多个任务, 前一个任务结束, 第二个任务开始
+
+            6. gulp.parallel()
+                => 语法: gulp.parallel(任务1, 任务2, 任务3, ...)
+                => 作用: 并行开始多个任务
+
+            7. pipe()
+                => 管道函数
+                => 所有的 gulp API 都是基于流
+                => 接收当前流, 进入下一个流过程的管道函数
+                => 例子:
+                    gulp.src().pipe(压缩任务).pipe(转码).pipe(gulp.dest('abc'))
+        */
+    </script>
+</body>
+
+</html>

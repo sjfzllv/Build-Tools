@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @-@include('./head.html, {title: '首页'}')
+</head>
+
+<body>
+    <!-- 引入 header.html -->
+    <!-- 导入 html 文件的使用 -->
+    <!-- 语法: 自定义标识符include('要导入的文件路径') -->
+    <!-- 文件路径: 从 basepath 以后开始书写 -->
+    @-@include('./header.html', {title: '首页', show: ''})
+    <hr>
+    <hr>
+    <div>
+        本页面内容区域
+    </div>
+    <hr>
+    <hr>
+    <!-- 引入 footer.html -->
+    @-@include('./footer.html')
+</body>
+
+</html>

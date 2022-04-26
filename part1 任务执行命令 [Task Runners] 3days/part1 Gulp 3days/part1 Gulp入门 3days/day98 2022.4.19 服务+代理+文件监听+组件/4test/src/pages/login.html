@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @-@include('./head.html, {title: '登录'}')
+</head>
+
+<body>
+    <!-- 引入 header.html -->
+    <!-- 导入 html 文件的使用 -->
+    <!-- 语法: 自定义标识符include('要导入的文件路径') -->
+    <!-- 文件路径: 从 basepath 以后开始书写 -->
+    <!-- 在导入的时候传递第二个参数, 是一个 json 格式的对象 -->
+    @-@include('./header.html', {title: '登录页', show: 'active'})
+    <hr>
+    <hr>
+    <div>
+        本页面内容区域
+    </div>
+    <hr>
+    <hr>
+    <!-- 引入 footer.html -->
+    @-@include('./footer.html')
+</body>
+
+</html>
